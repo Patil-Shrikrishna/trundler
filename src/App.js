@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Product from './pages/Product';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=''>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <a className="navbar-brand  " href="#">
+            <h3 className='text-warning m-0' style={{ fontFamily: 'Sarina' }}>Trundler</h3>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <a className="nav-link h4 m-3 " aria-current="page" href="#">Electronics</a>
+              <a className="nav-link h4 m-3 " href="#">Jewelery</a>
+              <a className="nav-link h4 m-3 " href="#">Men's clothing</a>
+              <a className="nav-link h4 m-3 " href="#">Women's clothing</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      {/* Main Content */}
+      <Product/>
     </div>
   );
 }
-
-export default App;
